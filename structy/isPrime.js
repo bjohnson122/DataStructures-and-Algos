@@ -18,8 +18,9 @@ const isPrime = (n) => {
 
   for (let i = 2; i < n; i++) {
     // count all integers leading up to n but not including n or 1
-    if (n % i === 0) { // if n % that number (i) = 0 n is not prime
-      
+    if (n % i === 0) {
+      // if n % that number (i) = 0 n is not prime
+
       return false;
     }
   }
