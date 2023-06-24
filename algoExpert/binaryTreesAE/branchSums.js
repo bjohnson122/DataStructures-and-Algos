@@ -27,7 +27,7 @@ class BinaryTree {
   }
 }
 
-//code is written below
+// TIME: O(n) || SPACE: O(n)
 function branchSums(node, runningSum = 0, sums = []) {
   let currentSum = node.value + runningSum;
 
