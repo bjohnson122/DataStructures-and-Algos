@@ -23,17 +23,20 @@ APPROACH:
 
 */
 // TIME: O(n) n = length of array || SPACE: O(1)
-function isValidSubsequence(array, sequence) {  
-    let filtered = array.filter(ele => { return sequence.includes(ele)})
-    let currIdxInFiltered = filtered.length-1 // starting from the end
-    let sequenceIdx = sequence.length -1
-    
-    while ((currIdxInFiltered >= 0) && (sequenceIdx >= 0)) { // while we're not at the beginning of our arrs
-     if (sequence[sequenceIdx] === filtered[currIdxInFiltered]) {
-       sequence.pop()
-       sequenceIdx--
-     } 
-      currIdxInFiltered--
+function isValidSubsequence(array, sequence) {
+  let filtered = array.filter((ele) => {
+    return sequence.includes(ele);
+  });
+  let currIdxInFiltered = filtered.length - 1; // starting from the end
+  let sequenceIdx = sequence.length - 1;
+
+  while (currIdxInFiltered >= 0 && sequenceIdx >= 0) {
+    // while we're not at the beginning of our arrs
+    if (sequence[sequenceIdx] === filtered[currIdxInFiltered]) {
+      sequence.pop();
+      sequenceIdx--;
     }
-   return sequence.length > 0 ? false : true;
+    currIdxInFiltered--;
   }
+  return sequence.length > 0 ? false : true;
+}

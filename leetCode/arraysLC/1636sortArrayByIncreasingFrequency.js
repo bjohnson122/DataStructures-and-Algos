@@ -17,7 +17,6 @@ Return the sorted array.
 // sort the array based on the values in the frequency container
 // if the values are the same, the larger value goes first
 
-
 // TIME: O(nlogn) || SPACE: O(n)
 var frequencySort = function (nums) {
   let container = new Map();

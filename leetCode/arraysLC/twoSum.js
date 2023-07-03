@@ -24,21 +24,18 @@ APPROACH:
         - add them & based on the sum, move only ONE pointer
         - return the idxs
 */
- // TIME: O(n)  || SPACE: O(n)
+// TIME: O(n)  || SPACE: O(n)
 function twoSum(arr, target) {
-    const neededNumbers = {};    
-     
-    for (let i = 0; i < arr.length; i++) {   
-      let currentNumber = arr[i];     
-      let difference = target - currentNumber
-      
-      if (neededNumbers[currentNumber] !== undefined) {          
-        return [neededNumbers[currentNumber], i ]
-      }
-      else {
-        neededNumbers[difference] = i
-      }
+  const neededNumbers = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    let currentNumber = arr[i];
+    let difference = target - currentNumber;
+
+    if (neededNumbers[currentNumber] !== undefined) {
+      return [neededNumbers[currentNumber], i];
+    } else {
+      neededNumbers[difference] = i;
     }
   }
-  
-  
+}
