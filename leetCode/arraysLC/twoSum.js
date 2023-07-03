@@ -18,13 +18,13 @@ APPROACH:
     - use obj store the difference (target - currentNum ) as the key and the idx as the value
     - see if the current num is in the obj
         - if so, return obj[currentNum] (the idx of the difference), and the current idx
-    OPTIMIZED:
+    OPTIMIZED: Space: O(1)
         - establish a left pointer & right pointer
         - as long as the pointers don't intersect, 
         - add them & based on the sum, move only ONE pointer
         - return the idxs
 */
- 
+ // TIME: O(n)  || SPACE: O(n)
 function twoSum(arr, target) {
     const neededNumbers = {};    
      
