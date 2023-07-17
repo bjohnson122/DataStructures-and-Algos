@@ -21,7 +21,7 @@ APPROACH:
 
 */
 
-// Time: O(n) | SPACE: O(1)
+// SOLUTION 1: Time: O(n) | SPACE: O(1)
 
 class LinkedList {
   constructor(value) {
@@ -39,4 +39,24 @@ function middleNode(linkedList) {
     slow = slow.next;
   }
   return slow;
+}
+
+// SOLUTION 2: Time: O(n) | SPACE: O(1)
+function middleNode(linkedList) {
+  let length = 0;
+  let mid = linkedList;
+
+  while (linkedList) {
+    linkedList = linkedList.next;
+    length++;
+  }
+  let target = Math.floor(length / 2);
+
+  if (length === 1) return mid;
+
+  while (target !== 0 && mid !== null) {
+    target--;
+    mid = mid.next;
+  }
+  return mid;
 }
