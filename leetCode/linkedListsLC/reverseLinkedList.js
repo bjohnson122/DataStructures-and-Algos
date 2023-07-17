@@ -21,7 +21,7 @@ Time: O(n): where n is the length of the linked list
 Space: O(1)
   */
 var reverseList = function(head) {
-
+// 1 - 2 -4 - 6- 7- 8 -9   
     let currentNode = head;             // begin with the head of the linked list
     let previousNode = null;            // assign previousNode to null because the end of linked lists point to NULL
                                         // we do this in the beginning because when we resverse the linked list,

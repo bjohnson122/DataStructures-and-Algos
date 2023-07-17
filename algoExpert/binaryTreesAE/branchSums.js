@@ -2,7 +2,9 @@
 PROMPT:
 Given a Binary Tree, sum all of the branches of the tree
 and return them in an array, ordered from leftmost branch 
-sum to rightmost branch sum. In a tree, a branch is a path that starts at the root node and ends at one of the leaf nodes. A branch sum means the sum of all values in a branch.
+sum to rightmost branch sum. In a tree, a branch is a path
+that starts at the root node and ends at one of the leaf nodes. 
+A branch sum means the sum of all values in a branch.
 
 Expected INPUT: root (node)
 Expected OUTPUT: an ARRAY of integers

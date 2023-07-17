@@ -28,7 +28,7 @@ APPROACH:
 
 - if the stack is clear, return true. 
  */
-
+// '{, (, ), [, }, ]' --> [{, ] 
 // TIME: O(n) | SPACE: O(n)
 var isValid = function (s) {
   if (!s || s.length < 2) return false;
