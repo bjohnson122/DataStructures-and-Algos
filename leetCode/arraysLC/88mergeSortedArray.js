@@ -17,7 +17,7 @@ Output: [1,2,2,3,5,6]
 
 */
 // Time: O(n) |  Space O(1)
-var merge = function (nums1, m, nums2, n) {
+const merge = function (nums1, m, nums2, n) {
   let numsOneIdx = m - 1;
   let numsTwoIdx = n - 1;
   let i = nums1.length - 1; // or n+m -1
