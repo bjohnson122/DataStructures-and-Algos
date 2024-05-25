@@ -7,6 +7,6 @@ Output: 1
 
 */
 // Time: O(1)  | Space:O(1)
-var argumentsLength = function (...args) {
+const argumentsLength = function (...args) {
   return [...args].length;
 };
