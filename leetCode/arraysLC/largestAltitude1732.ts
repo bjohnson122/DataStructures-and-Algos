@@ -24,20 +24,19 @@ Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 //
 //First iteration -- could be done without making an extra array
 function largestAltitude(gain: number[]): number {
-    const arr = [0];
-    let max = 0
-    let arrPointer = 0
-    let gainPointer = 0
+  const arr = [0];
+  let max = 0;
+  let arrPointer = 0;
+  let gainPointer = 0;
 
-    while (gainPointer <= gain.length) {
-        let sum = arr[arrPointer] += gain[gainPointer]
-        if (max < sum) {
-            max = sum
-            }
-        arr.push(sum)
-        arrPointer++
-        gainPointer++
+  while (gainPointer <= gain.length) {
+    let sum = (arr[arrPointer] += gain[gainPointer]);
+    if (max < sum) {
+      max = sum;
     }
-
-    return max;
-};
+    arr.push(sum);
+    arrPointer++;
+    gainPointer++;
+  }
+  return max;
+}
