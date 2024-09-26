@@ -23,6 +23,9 @@ APPROACH:
         - as long as the pointers don't intersect, 
         - add them & based on the sum, move only ONE pointer
         - return the idxs
+
+nums=    [3,4,5,6]
+target=  7
 */
 // TIME: O(n)  || SPACE: O(n)
 function twoSum(arr, target) {
@@ -37,5 +40,20 @@ function twoSum(arr, target) {
     } else {
       neededNumbers[difference] = i;
     }
+  }
+}
+
+// Alternative solution (same time and space complexity):
+function twoSum(arr, target) {
+  const mapTwoSum = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    let currentNum = arr[i];
+    let difference = target - currentNum;
+
+    if (mapTwoSum.has(difference)) {
+      return [mapTwoSum.get(difference), i];
+    }
+
+    mapTwoSum.set(currentNum, i);
   }
 }
